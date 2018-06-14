@@ -1,0 +1,12 @@
+<p>
+    Lets see <span>{{title}} </span>
+</p>
+<div>
+    <input type = "text" name = "msg" placeholder = "Enter your message" [(ngModel)]="textMessage" (keyup.enter)="onSendMessage()" autofocus>
+    <ul class="messages">
+        <li [ngClass]="{'left': i.label=='You', 'right': i.label=='System'}" *ngFor="let i of messages1">
+            {{i.label}} : {{i.message}}
+        </li>
+    </ul>
+</div>
+
